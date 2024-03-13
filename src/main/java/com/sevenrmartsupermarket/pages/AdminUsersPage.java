@@ -22,30 +22,30 @@ public class AdminUsersPage {
 	GeneralUtility generalutility=new GeneralUtility();
 	Properties properties=new Properties();
 	@FindBy(xpath="//p[text()='Admin Users']")
-	WebElement adminUserLink;
+	private WebElement adminUserLink;
 	@FindBy(xpath="//a[contains(text(),'New')]")
-	WebElement newButton;
+	private WebElement newButton;
 	@FindBy(xpath="//input[@id='username']")
-	WebElement userNameField;
+	private WebElement userNameField;
 	@FindBy(xpath="//input[@id='password']")
-	WebElement passwordField;
+	private WebElement passwordField;
 	@FindBy(xpath="//select[@name='user_type']")
-	WebElement selectDropDown;
+	private WebElement selectDropDown;
 	@FindBy(xpath="//button[contains(text(),'Save')]")
-	WebElement saveButton;
+	private WebElement saveButton;
 	@FindBy(xpath="//h5[contains(text(),'Alert!')]")
-	WebElement alertMessage;
+	private WebElement alertMessage;
 	@FindBy(xpath="//a[contains(text(),'Search')]")
-	WebElement searchButton;
+	private WebElement searchButton;
 	@FindBy(xpath="//input[@id='un']")
-	WebElement searchUserName;
-	String userName;
+	private WebElement searchUserName;
+	private String userName;
 	@FindBy(xpath="//button[@name='Search']")
-	WebElement searchFieldButton;
+	private WebElement searchFieldButton;
 	@FindBy(xpath="//table[@class='table table-bordered table-hover table-sm']/tbody/tr[1]/td[1]")
-	WebElement searchFieldUserName;
+	private WebElement searchFieldUserName;
 	@FindBy(xpath="//table//tbody/tr//td[1]")
-	List<WebElement> userNameList;
+	private List<WebElement> userNameList;
 	public  AdminUsersPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
