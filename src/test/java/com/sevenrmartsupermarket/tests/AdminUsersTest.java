@@ -61,6 +61,7 @@ public void verifyAddingNewAdminUser() {
 		 String actualAlertText=adminuserpage.getAlertMessage();
 		 String expectedAlertText="Alert!";
 		 Assert.assertEquals(actualAlertText, expectedAlertText);
+		 
 	 }
 	 
 	 
