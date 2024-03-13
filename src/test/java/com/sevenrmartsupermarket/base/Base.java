@@ -76,6 +76,6 @@ public void terminateSession(ITestResult itestresult) {
 	if(itestresult.getStatus()==ITestResult.FAILURE) {
 		ScreenShot.takeScreenShot(driver,itestresult.getName());
 	}
-	driver.quit();
+	//driver.quit();
 }
 }
