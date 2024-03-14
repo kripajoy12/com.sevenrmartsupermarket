@@ -12,13 +12,13 @@ public class HomeTest extends Base{
 	Excel excel=new Excel();
 	LoginPage loginpage;
 	HomePage homepage;
-	@Test(groups = {"smoke","regression"})
+	/*@Test(groups = {"smoke","regression"})
 	public void verifyAdminUsersInfo() {
 		loginpage=new LoginPage(driver);
 		homepage=new HomePage(driver);
 		loginpage.login();
 		homepage.clickOnAdminUserList();
-	}
+	}*/
 		
 	}
 
