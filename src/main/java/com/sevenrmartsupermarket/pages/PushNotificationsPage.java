@@ -12,7 +12,7 @@ public class PushNotificationsPage {
 	@FindBy(xpath="//input[@id='title']")
 	private WebElement titleField;
 	@FindBy(xpath="//input[@id='description']")
-	WebElement descriptionField; 
+	private WebElement descriptionField; 
 	@FindBy(xpath="//button[@name='create']")
 	WebElement sendButton;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")
