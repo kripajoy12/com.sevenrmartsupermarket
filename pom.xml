@@ -18,7 +18,7 @@
 					<version>3.2.5</version>
 					<configuration>
 					<suiteXmlFiles>
-					 <file>src/main/resources/xmlfiles/parallel.xml</file>
+					 <file>src/main/resources/xmlfiles/Groups.xml</file>
 					</suiteXmlFiles>
 					</configuration>
 				</plugin>
