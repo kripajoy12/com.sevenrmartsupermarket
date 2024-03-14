@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class PushNotificationsPage {
 	WebDriver driver;
-	@FindBy(xpath="//p[text()='Push Notifications']")
+	private @FindBy(xpath="//p[text()='Push Notifications']")
 	WebElement pushNotification;
 	@FindBy(xpath="//input[@id='title']")
 	private WebElement titleField;
