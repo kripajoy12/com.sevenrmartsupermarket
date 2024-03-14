@@ -39,7 +39,7 @@ public class PushNotificationsPage {
 		return successMessage.getText();
 		
 	}
-	//public String getTextOfResetButton() {
+	public String getTextOfResetButton() {
 		return  resetButton.getText();
 	}
 }
