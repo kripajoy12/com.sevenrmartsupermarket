@@ -18,7 +18,7 @@ public class PushNotificationsPage {
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")
 	WebElement successMessage;
 	@FindBy(xpath="//a[text()='Reset']")
-	WebElement resetButton;
+	private WebElement resetButton;
 	public PushNotificationsPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
