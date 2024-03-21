@@ -20,7 +20,8 @@ import com.sevenrmartsupermarket.constants.Constants;
 public class ExtentReporter implements IReporter {
 	private ExtentReports extent;
 
-	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {//for generating report
+	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {// for generating
+																										// report
 		extent = new ExtentReports(Constants.EXTENT_REPORT_PATH + File.separator + "Extent.html", true);
 
 		for (ISuite suite : suites) {
