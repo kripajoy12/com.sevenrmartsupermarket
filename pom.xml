@@ -17,9 +17,10 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>3.2.5</version>
 					<configuration>
-					<suiteXmlFiles>
-					 <file>src/main/resources/xmlfiles/Groups.xml</file>
-					</suiteXmlFiles>
+						<suiteXmlFiles>
+							<file>src/main/resources/xmlfiles/Groups.xml</file>
+
+						</suiteXmlFiles>
 					</configuration>
 				</plugin>
 			</plugins>

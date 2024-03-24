@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="GroupRun" thread-count="10" parallel="tests">
-<test name="Regression">
-<groups>
+	<test name="Regression">
+		<groups>
 
-<run>
-<include name="smoke">
-</include>
+			<run>
+				<include name="smoke">
+				</include>
 
-</run>
+			</run>
 
-</groups>
-<classes>
+		</groups>
+		<classes>
 			<class name="com.sevenrmartsupermarket.tests.HomeTest"></class>
 			<class name="com.sevenrmartsupermarket.tests.LoginTest"></class>
 			<class name="com.sevenrmartsupermarket.tests.AdminUsersTest"></class>
-			<class name="com.sevenrmartsupermarket.tests.HomeTest"></class>
+
 		</classes>
-</test>
-<test name="Smoke">
-</test>
+	</test>
 </suite>

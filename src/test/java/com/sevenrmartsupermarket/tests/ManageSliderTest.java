@@ -11,7 +11,7 @@ public class ManageSliderTest extends Base{
 	LoginPage loginpage;
 	ManageSliderPage managesliderpage;
 	@Test
-	public void verifyAddSlider() {
+	public void verifyAddingNewSlider() {
 		loginpage=new LoginPage(driver);
 		managesliderpage=new ManageSliderPage(driver);
 		loginpage.login();
@@ -22,6 +22,5 @@ public class ManageSliderTest extends Base{
 		 String expectedAlertText="Alert!";
 		 Assert.assertEquals(actualAlertText, expectedAlertText);
 	}
-	
 
 }

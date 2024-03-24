@@ -35,10 +35,7 @@ public class PushNotificationsPage {
 	public void clickOnSendButton() {
 		sendButton.click();
 	}
-	public String getSuccessMessage() {
-		return successMessage.getText();
-		
-	}
+	
 	public String getTextOfResetButton() {
 		return  resetButton.getText();
 	}

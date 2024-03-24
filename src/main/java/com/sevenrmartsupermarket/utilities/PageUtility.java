@@ -41,8 +41,7 @@ public class PageUtility {
 	}
 
 	public void jsClick(WebElement element) {
-
-		//js.executeScript("window.scrollBy(0,600)");
+		js.executeScript("window.scrollBy(0,600)");
 		js.executeScript("arguments[0].click();", element);
 
 	}
@@ -62,7 +61,5 @@ public class PageUtility {
 		}
 		
 	}
-	public void createDeliveryBoy() {
-		
-	}
+	
 }

@@ -1,7 +1,7 @@
 package com.sevenrmartsupermarket.listeners;
 
 
-	/*import org.testng.IRetryAnalyzer;
+	import org.testng.IRetryAnalyzer;
 	import org.testng.ITestResult;
 
 	public class RetryAnalyzer  implements IRetryAnalyzer{
@@ -16,7 +16,8 @@ package com.sevenrmartsupermarket.listeners;
 	            return true;
 	        }
 	        return false;
-	    }*/
+	    }
+	}
 	    
 
 	

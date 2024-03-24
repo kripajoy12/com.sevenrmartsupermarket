@@ -10,25 +10,29 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.sevenrmartsupermarket.constants.Constants;
 import com.sevenrmartsupermarket.utilities.GeneralUtility;
+import com.sevenrmartsupermarket.utilities.PageUtility;
 
 public class LoginPage {
 	WebDriver driver;
 	Properties properties=new Properties();
+	PageUtility pageutility;
 	@FindBy(xpath="//input[@name='username']")
-	WebElement userNameField;
+	private WebElement userNameField;
 	@FindBy(xpath="//input[@name='password']")
-	WebElement passwordField;
+	private WebElement passwordField;
 	@FindBy(xpath="//button[text()='Sign In']")
-	WebElement loginButton;
-	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")
-	WebElement alertMessage;
+	private WebElement loginButton;
+	@FindBy(xpath="//h5[text()=' Alert!']")
+	private WebElement alertMessage;
 	@FindBy(xpath="//label[contains(text(),'Remember Me')]")
-	WebElement  rememberMeCheckBox;
+	private WebElement  rememberMeText;
+	@FindBy(xpath="//input[@name='remember_me']")
+	private WebElement rememberMeCheckBox;
 public LoginPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver,this);
 		try {
-			FileInputStream fi=new FileInputStream(Constants.CONFIG_FILE_PATH);//initialisation
+			FileInputStream fi=new FileInputStream(Constants.CONFIG_FILE_PATH);
 			properties.load(fi);
 			
 		} catch (Exception e) {
@@ -70,8 +74,15 @@ public LoginPage(WebDriver driver) {
 		
 	}
 	public String getTextOfRememberMe() {
-	return rememberMeCheckBox.getText();
+	return rememberMeText.getText();
 		
 	}
-	
+	public void clickOnRememberMeCheckBox() {
+		pageutility=new PageUtility(driver);
+		pageutility.jsClick(rememberMeCheckBox);
+	}
+	public Boolean selectRememberMeCheckBox() {
+		 return rememberMeCheckBox.isSelected();
+		
+	}
 }

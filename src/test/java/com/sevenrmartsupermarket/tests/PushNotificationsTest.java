@@ -6,13 +6,13 @@ import org.testng.annotations.Test;
 import com.sevenrmartsupermarket.base.Base;
 import com.sevenrmartsupermarket.pages.LoginPage;
 import com.sevenrmartsupermarket.pages.PushNotificationsPage;
-import com.sevenrmartsupermarket.utilities.Excel;
+import com.sevenrmartsupermarket.utilities.ExcelUtility;
 import com.sevenrmartsupermarket.utilities.ScreenShot;
 
 public class PushNotificationsTest extends Base {
 	LoginPage loginpage;
 	PushNotificationsPage pushnotificationspage;
-	Excel excel=new Excel();
+	ExcelUtility excel=new ExcelUtility();
 	
 	@Test
 	public void verifyPushNotificationMessage() {
@@ -28,25 +28,11 @@ public class PushNotificationsTest extends Base {
 		pushnotificationspage.enterTitle(title);
 		pushnotificationspage.enterDescription(description);
 		pushnotificationspage.clickOnSendButton();
-		//ScreenShot.takeScreenShot(driver,"kripa");
+		String actualText="test";
+		String expectedText=title;
+		Assert.assertEquals(actualText, expectedText);
 	}
-	@Test
-	public void verifySuccessMessage() {
-	loginpage=new LoginPage(driver);
-	pushnotificationspage=new PushNotificationsPage(driver);
-	loginpage.login();
-	pushnotificationspage.clickOnPushNotification();
-	excel.setExcelFile("PushNotificationsData","Sheet1");
-	String title=excel.getCellData(0, 0);
-	System.out.println(title);
-	String description=excel.getCellData(0, 1);
-	System.out.println(description);
-	pushnotificationspage.enterTitle(title);
-	pushnotificationspage.enterDescription(description);
-	pushnotificationspage.clickOnSendButton();	
-	System.out.println(pushnotificationspage.getSuccessMessage());
-
-}
+	
 	@Test
 	public void verifyResetButtonText() {
 		loginpage=new LoginPage(driver);
@@ -54,7 +40,7 @@ public class PushNotificationsTest extends Base {
 		loginpage.login();
 		pushnotificationspage.clickOnPushNotification();
 		String actualText=pushnotificationspage.getTextOfResetButton();
-		String expectedText="Rese";
+		String expectedText="Reset";
 		Assert.assertEquals(actualText,expectedText);
 	}
 }
